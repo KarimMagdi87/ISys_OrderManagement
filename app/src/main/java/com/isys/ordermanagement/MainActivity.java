@@ -1,18 +1,23 @@
 package com.isys.ordermanagement;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-
+ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        list= (ListView) findViewById(R.id.listView);
+        String [] names ={"a"};
 
-        int x=3;
+        CustomList itemsAdapter = new CustomList(this,names);
+
+        list.setAdapter(itemsAdapter);
     }
 
     @Override
