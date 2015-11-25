@@ -13,7 +13,7 @@ ListView list;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         list= (ListView) findViewById(R.id.listView);
-        String [] names ={"a"};
+        String [] names ={"a","b"};
 
         CustomList itemsAdapter = new CustomList(this,names);
 
